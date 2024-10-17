@@ -1,0 +1,10 @@
+name: First Workflow #name of the workflow
+on: workflow_dispatch #event that gonna trigger this workflow. In this case, it an event allowing a manual trigger of this workflow
+jobs: #defining jobs
+  first-job: #customize job name
+    runs-on: windows-2022  #Define the runner on which the job will execute the different step (the environment)
+    steps:
+      - name: Print greeting
+        run: echo "Hello World"
+      - name: Print goodbye
+        run: echo "Done - Bye!"
